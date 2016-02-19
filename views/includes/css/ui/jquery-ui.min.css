@@ -1,0 +1,53 @@
+/*
+Error: Invalid CSS after "none": expected expression (e.g. 1px, bold), was ";"
+        on line 10 of ./jquery-ui.css
+
+5: * Copyright jQuery Foundation and other contributors; Licensed MIT *\/
+6: 
+7: /* Layout helpers
+8: ----------------------------------*\/
+9: .ui-helper-hidden {
+10: 	display: none;
+11: }
+12: .ui-helper-hidden-accessible {
+13: 	border: 0;
+14: 	clip: rect(0 0 0 0);
+15: 	height: 1px;
+
+Backtrace:
+./jquery-ui.css:10
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/script/lexer.rb:221:in `expected!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/script/parser.rb:602:in `assert_done'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/script/parser.rb:63:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/script/parser.rb:183:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/script.rb:27:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:1120:in `parse_script'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:710:in `parse_property'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:681:in `parse_property_or_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:647:in `parse_line'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:525:in `build_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:544:in `block in append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:534:in `block in build_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:527:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:527:in `build_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:544:in `block in append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:396:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:407:in `run'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/bin/sass:13:in `<top (required)>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"none\": expected expression (e.g. 1px, bold), was \";\"\A         on line 10 of ./jquery-ui.css\A \A 5: * Copyright jQuery Foundation and other contributors; Licensed MIT */\A 6: \A 7: /* Layout helpers\A 8: ----------------------------------*/\A 9: .ui-helper-hidden {\A 10: 	display: none;\A 11: }\A 12: .ui-helper-hidden-accessible {\A 13: 	border: 0;\A 14: 	clip: rect(0 0 0 0);\A 15: 	height: 1px;"; }

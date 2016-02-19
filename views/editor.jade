@@ -1,0 +1,62 @@
+html
+	head
+		title #{title}
+		script(src='/includes/js/jquery.min.js')
+		script(src='/includes/js/jquery-ui.min.js')
+		script(src='/includes/#{editor}/#{editor}.js')
+		script(src='/includes/js/terminal.js')
+		script(src='/includes/js/keyboard.js')
+		script(src='/includes/js/sockets.js')
+		link(href='/includes/css/ui/jquery-ui.min.css' rel='stylesheet' type='text/css')
+		link(href='/includes/css/ui/jquery-ui.structure.min.css' rel='stylesheet' type='text/css')
+		link(href='/includes/css/ui/jquery-ui.theme.min.css' rel='stylesheet' type='text/css')
+		link(href='/includes/css/global.css' rel='stylesheet' type='text/css')
+		link(href='/includes/css/terminal.css' rel='stylesheet' type='text/css')
+		link(href='/includes/css/fonts.css' rel='stylesheet' type='text/css')
+		if font
+			style #editor { font-family: #{font}; }
+	body
+		div(id='tilda')
+		if folders
+			div(id='folders')
+				ul
+					each folder, index in folders
+						li( data-folder="#{folder.name}" ).folder
+							div #{folder.name}
+							if folder.subfolders
+								ul( class="subfolders")
+									each file, index in folder.subfolders
+										li( data-folder="#{folder.name}" data-file="#{file}" ).file
+											div #{file}
+				div.controls
+					i( class="icon fa fa-plus fa-4" )
+					i( class="icon fa fa-minus fa-4" )
+		div(id='editor')
+			div( id="#{editor}" )
+
+		script.
+			var user = 'chrome',
+			body = !{JSON.stringify(body)},
+			file = !{JSON.stringify(file)},
+			directory = !{JSON.stringify(directory)},
+			folders = !{JSON.stringify(folders)},
+			path = !{JSON.stringify(path)},
+			editor = !{JSON.stringify(editor)},
+			theme = !{JSON.stringify(theme)},
+			mode = !{JSON.stringify(mode)};
+
+
+			if (editor == 'ace') {
+				editor = ace.edit('ace');
+				editor.setTheme('ace/theme/'+theme);
+				editor.$blockScrolling = Infinity;
+				editor.getSession().setMode('ace/theme/'+mode);
+				editor.setValue(body, -1);
+				editor.setFontSize(14);
+				editor.renderer.setShowGutter(false);
+				editor.focus();
+			} else if (editor == 'codemirror') {
+				var element = document.getElementById('codemirror');
+				editor = CodeMirror(element);
+			}
+	script(src='//darktext.org:1999/socket.io/socket.io.js')

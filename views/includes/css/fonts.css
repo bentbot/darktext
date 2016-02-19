@@ -1,0 +1,9 @@
+@import url('./fonts/font-awesome.css');
+@import url('./fonts/icomoon.css');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic,700,700italic);
+@font-face {
+  font-family: 'Ace';
+  src: url('../fonts/Ace-Attorney.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

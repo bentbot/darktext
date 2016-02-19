@@ -1,0 +1,31 @@
+{
+  "name": "DarkText",
+  "version": "1.0.0",
+  "description": "A console based text editor.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.3",
+    "body-parser": "^1.13.1",
+    "cookie-parser": "^1.3.5",
+    "express": "^4.12.4",
+    "fs": "0.0.2",
+    "jade": "^1.11.0",
+    "read-json": "^0.1.0",
+    "socket.io": "^1.3.5",
+    "winston": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodejs index.js"
+  },
+  "keywords": [
+    "ace",
+    "terminal",
+    "socket.io"
+  ],
+  "author": "bentbot",
+  "license": "ISC"
+}
