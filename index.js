@@ -28,6 +28,12 @@ var vars = {
 	port: 8000
 }
 
+var basic = auth.basic({
+	realm: "Darktext"
+}, function (username, password, callback) {
+	callback(username === 'darktext' && password === 'darktext');
+});
+
 var io = websocket.listen(1999);
 var shoe = io;
 
@@ -35,6 +41,7 @@ winston.add(winston.transports.File, { filename: vars.logs+'/'+'dev.log' });
 
 app.use( cookieParser() );
 app.use( bodyParser.urlencoded({ extended: false }) );
+app.use( auth.connect(basic) );
 
 app.use( '/includes', express.static('views/includes') );
 app.use( '/includes/ace', express.static('views/includes/ace') );
