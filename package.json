@@ -20,7 +20,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "nodejs index.js"
+    "test": "node index.js"
   },
   "keywords": [
     "ace",
